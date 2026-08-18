@@ -49,7 +49,7 @@
 ## Features
 
 * **Modular Multi-Page Layout:** Dedicated sections for project context (`about.html`), programming concepts (`languages.html`), and hardware specifications (`parts.html`).
-* **Custom Responsive Styling:** Clean aesthetics and layout adaptability powered by an external stylesheet (`Design.css`).
+* **Custom Responsive Styling:** Clean layout and adaptability powered by an external stylesheet (`Design.css`).
 * **Continuous Deployment:** Hosted directly from GitHub Pages for fast worldwide accessibility.
 
 ---
