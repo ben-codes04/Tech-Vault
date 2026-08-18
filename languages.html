@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Languages</title>
+    <link rel="stylesheet" href="Design.css">
+</head>
+<body>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="parts.html">Computer Components</a></li>
+            <li><a href="languages.html">Programming Languages</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <h1 class="page-title">Programming Language Showdown</h1>
+        <p class="page-subtitle">Syntax basics, architectural roles, and primary security vulnerabilities across major programming languages.</p>
+
+        <div class="section-divider"><span>--- C / C++ ---</span></div>
+        <section id="c-cpp" class="card">
+            <h2>🔷 C / C++ <span class="risk-badge risk-high">High Memory Risk</span></h2>
+            <div class="creator-tag">👤 Creators: Dennis Ritchie (C, 1972) & Bjarne Stroustrup (C++, 1985)</div>
+            
+            <div class="card-body">
+                <img src="images/c-language.jpg" alt="C Language" class="card-img">
+                <div class="card-info">
+                    <p>C and C++ provide near-direct access to system memory and hardware registers, yielding unmatched execution speed. However, manual pointer arithmetic and memory management mean safety checks are left entirely to the developer.</p>
+                    
+                    <div class="code-box">
+                        <div class="code-title">💻 Basic C Syntax</div>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello from low-level C!\n");
+    return 0;
+}</code></pre>
+                    </div>
+
+                    <div class="security-box">
+                        <div class="security-title">⚠️ Common Vulnerabilities & Security Risks</div>
+                        <ul class="vulnerability-list">
+                            <li><strong>Buffer Overflows:</strong> Unchecked memory bounds allow malicious input to overwrite executable stack frames.</li>
+                            <li><strong>Use-After-Free:</strong> Accessing memory pointers after deallocation triggers execution exploits.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"><span>--- Rust ---</span></div>
+        <section id="rust" class="card">
+            <h2>🦀 Rust <span class="risk-badge risk-low">Low Memory Risk</span></h2>
+            <div class="creator-tag">👤 Creator: Graydon Hoare / Mozilla (2010)</div>
+            
+            <div class="card-body">
+                <img src="images/rust.jpg" alt="Rust Language" class="card-img">
+                <div class="card-info">
+                    <p>Rust guarantees memory safety at compile time through its strict "ownership" and borrowing rules, eliminating C-style pointer bugs without requiring a runtime garbage collector.</p>
+                    
+                    <div class="code-box">
+                        <div class="code-title">💻 Basic Rust Syntax</div>
+<pre><code>fn main() {
+    let message = "Hello, memory-safe world!";
+    println!("{}", message);
+}</code></pre>
+                    </div>
+
+                    <div class="security-box">
+                        <div class="security-title">⚠️ Common Vulnerabilities & Security Risks</div>
+                        <ul class="vulnerability-list">
+                            <li><strong>Unsafe Blocks (`unsafe {}`):</strong> Bypassing compiler checks for foreign functions reintroduces memory bugs.</li>
+                            <li><strong>Logic & Deadlocks:</strong> Thread synchronization deadlocks can still occur logic-wise.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"><span>--- Python ---</span></div>
+        <section id="python" class="card">
+            <h2>🐍 Python <span class="risk-badge risk-med">Medium Risk</span></h2>
+            <div class="creator-tag">👤 Creator: Guido van Rossum (1991)</div>
+            
+            <div class="card-body">
+                <img src="images/python.jpg" alt="Python Language" class="card-img">
+                <div class="card-info">
+                    <p>Designed for code readability and rapid development, Python manages memory automatically via garbage collection. It leads in web backends, data science, and AI development.</p>
+                    
+                    <div class="code-box">
+                        <div class="code-title">💻 Basic Python Syntax</div>
+<pre><code>def greet(user):
+    return f"Hello, {user}!"
+
+print(greet("Developer"))</code></pre>
+                    </div>
+
+                    <div class="security-box">
+                        <div class="security-title">⚠️ Common Vulnerabilities & Security Risks</div>
+                        <ul class="vulnerability-list">
+                            <li><strong>Insecure Deserialization (`pickle`):</strong> Loading untrusted dynamic objects executes unsanitized code.</li>
+                            <li><strong>Code Injection (`eval()`):</strong> Passing unverified user input strings into dynamic runtime interpreters.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"><span>--- JavaScript ---</span></div>
+        <section id="javascript" class="card">
+            <h2>💛 JavaScript <span class="risk-badge risk-high">High Web Risk</span></h2>
+            <div class="creator-tag">👤 Creator: Brendan Eich (1995)</div>
+            
+            <div class="card-body">
+                <img src="images/javascript.jpg" alt="JavaScript" class="card-img">
+                <div class="card-info">
+                    <p>As the primary scripting language of the web, JavaScript executes on browsers and servers (Node.js) to manage asynchronous logic and user interfaces.</p>
+                    
+                    <div class="code-box">
+                        <div class="code-title">💻 Basic JavaScript Syntax</div>
+<pre><code>const user = "Guest";
+console.log(`Welcome, ${user}!`);
+
+document.querySelector("button").addEventListener("click", () => alert("Clicked!"));</code></pre>
+                    </div>
+
+                    <div class="security-box">
+                        <div class="security-title">⚠️ Common Vulnerabilities & Security Risks</div>
+                        <ul class="vulnerability-list">
+                            <li><strong>Cross-Site Scripting (XSS):</strong> Unescaped inputs injected into dynamic DOM elements hijack sessions.</li>
+                            <li><strong>Prototype Pollution:</strong> Overwriting base object properties across execution runtimes.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"><span>--- Java ---</span></div>
+        <section id="java" class="card">
+            <h2>☕ Java <span class="risk-badge risk-med">Medium Risk</span></h2>
+            <div class="creator-tag">👤 Creator: James Gosling / Sun Microsystems (1995)</div>
+            
+            <div class="card-body">
+                <img src="images/java.jpg" alt="Java Language" class="card-img">
+                <div class="card-info">
+                    <p>Java compiles code into bytecode executed by the Java Virtual Machine (JVM), enabling platform-independent enterprise and mobile application backends.</p>
+                    
+                    <div class="code-box">
+                        <div class="code-title">💻 Basic Java Syntax</div>
+<pre><code>public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, Enterprise JVM!");
+    }
+}</code></pre>
+                    </div>
+
+                    <div class="security-box">
+                        <div class="security-title">⚠️ Common Vulnerabilities & Security Risks</div>
+                        <ul class="vulnerability-list">
+                            <li><strong>Log4j style RCE:</strong> Unsanitized lookup injections inside logging frameworks.</li>
+                            <li><strong>Object Deserialization:</strong> Instantiating arbitrary serialized binary payloads.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"><span>--- PHP ---</span></div>
+        <section id="php" class="card">
+            <h2>🐘 PHP <span class="risk-badge risk-high">High Web Risk</span></h2>
+            <div class="creator-tag">👤 Creator: Rasmus Lerdorf (1994)</div>
+            
+            <div class="card-body">
+                <img src="images/php.jpg" alt="PHP Language" class="card-img">
+                <div class="card-info">
+                    <p>PHP is an open-source, server-side HTML scripting engine designed for querying database systems and processing dynamic web forms.</p>
+                    
+                    <div class="code-box">
+                        <div class="code-title">💻 Basic PHP Syntax</div>
+<pre><code>&lt;?php
+$name = "Visitor";
+echo "Hello, " . htmlspecialchars($name) . "!";
+?&gt;</code></pre>
+                    </div>
+
+                    <div class="security-box">
+                        <div class="security-title">⚠️ Common Vulnerabilities & Security Risks</div>
+                        <ul class="vulnerability-list">
+                            <li><strong>SQL Injection (SQLi):</strong> Concatenating dynamic request parameters directly into raw SQL strings.</li>
+                            <li><strong>Type Juggling:</strong> Dynamic loose comparison operators (`==`) causing authentication bypasses.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"><span>--- SQL ---</span></div>
+        <section id="sql" class="card">
+            <h2>🗄️ SQL <span class="risk-badge risk-high">High Data Risk</span></h2>
+            <div class="creator-tag">👤 Creators: Donald D. Chamberlin & Raymond F. Boyce (1974)</div>
+            
+            <div class="card-body">
+                <img src="images/sql.jpg" alt="SQL Database" class="card-img">
+                <div class="card-info">
+                    <p>SQL is the domain-specific query language used to create, query, update, and manage relational database schemas.</p>
+                    
+                    <div class="code-box">
+                        <div class="code-title">💻 Basic SQL Query</div>
+<pre><code>SELECT username, email 
+FROM users 
+WHERE status = 'active';</code></pre>
+                    </div>
+
+                    <div class="security-box">
+                        <div class="security-title">⚠️ Common Vulnerabilities & Security Risks</div>
+                        <ul class="vulnerability-list">
+                            <li><strong>Second-Order SQLi:</strong> Stored malicious payloads executing during subsequent database reads.</li>
+                            <li><strong>Over-Privileged Accounts:</strong> Database connections running with full admin/schema access.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
